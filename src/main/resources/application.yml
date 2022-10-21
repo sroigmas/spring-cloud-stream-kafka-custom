@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092 # Optional (default value)
+      bindings:
+        greetings-in:
+          destination: greetings
+          content-type: application/json # Optional (default value)
+        greetings-out:
+          destination: greetings
+          content-type: application/json # Optional (default value)
+server:
+  port: 8082
